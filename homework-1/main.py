@@ -26,10 +26,6 @@ class Database:
         if self.connection:
             self.connection.commit()
 
-    def rollback(self):
-        if self.connection:
-            self.connection.rollback()
-
 
 def insert_employees(db, employees_data):
     with open(employees_data, newline='') as csvfile:
